@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class PacienteTest {
 
     @Test
-    void deveNotificarUmAluno() {
+    void deveNotificarUmPaciente() {
         ListaEspera listaEspera = new ListaEspera("Joao", "Clinica A");
         Paciente paciente = new Paciente("Paciente 1");
         paciente.cadastrarListaEspera(listaEspera);
@@ -16,7 +16,7 @@ public class PacienteTest {
     }
 
     @Test
-    void deveNotificarAlunos() {
+    void deveNotificarPacientes() {
         ListaEspera listaEspera = new ListaEspera("Joao", "Clinica A");
         Paciente paciente = new Paciente("Paciente 1");
         Paciente paciente2 = new Paciente("Paciente 2");
@@ -29,7 +29,7 @@ public class PacienteTest {
     }
 
     @Test
-    void naoDeveNotificarAluno() {
+    void naoDeveNotificarPaciente() {
         ListaEspera listaEspera = new ListaEspera("Joao", "Clinica A");
         Paciente paciente = new Paciente("Paciente 1");
         listaEspera.agendarPacienteEmEspera();
@@ -37,7 +37,7 @@ public class PacienteTest {
     }
 
     @Test
-    void deveNotificarAlunoTurmaA() {
+    void deveNotificarPacienteListaA() {
         ListaEspera listaEspera = new ListaEspera("Joao", "Clinica A");
         Paciente paciente = new Paciente("Paciente 1");
         ListaEspera listaEsperaB = new ListaEspera("Ze", "Clinica B");
